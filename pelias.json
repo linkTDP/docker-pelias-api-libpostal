@@ -1,0 +1,75 @@
+{"esclient": {
+    "apiVersion": "2.3",
+    "keepAlive": true,
+    "requestTimeout": "120000",
+    "hosts": [{
+       "env": "production",
+       "protocol": "http",
+       "host": "192.168.56.1",
+       "port": 9200
+     }]
+	 },
+	"api": {
+    "textAnalyzer": "libpostal"
+  },
+  "imports": {
+    "geonames": {
+      "datapath": "/media/hdd"
+    },
+    "openstreetmap": {
+      "datapath": "C:/pelias/data",
+	  "leveldbpath": "C:/temp",
+	  "adminLookup": true,
+      "import": [{
+        "filename": "italy-latest.osm.pbf"
+      }]
+    },
+    "openaddresses": {
+      "datapath": "C:/pelias/data/openaddress",
+	  "adminLookup": true,
+      "files": [
+        "acerra.csv",
+		"bg.csv",
+		"biella.csv",
+		"bo.csv",
+		"bologna.csv",
+		"bs.csv",
+		"co.csv",
+		"cr.csv",
+		"fc.csv",
+		"fe.csv",
+		"ferrara.csv",
+		"files.txt",
+		"firenze.csv",
+		"lc.csv",
+		"lo.csv",
+		"mb.csv",
+		"mi.csv",
+		"mn.csv",
+		"mo.csv",
+		"pc.csv",
+		"pr.csv",
+		"pv.csv",
+		"ra.csv",
+		"re.csv",
+		"rn.csv",
+		"so.csv",
+		"south-tyrol.csv",
+		"statewide.csv",
+		"statewide2.csv",
+		"torino.csv",
+		"va.csv"
+      ]
+    },
+    "polyline": {
+      "datapath": "~/polyline",
+      "files": [
+        "road_network.polylines"
+      ]
+    },
+    "whosonfirst": {
+      "datapath": "C:/pelias/data/whosonfirst-data-it",
+	  "importVenues":true
+    }
+  }
+}
